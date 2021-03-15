@@ -1,0 +1,414 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './color.scss';
+@import './similarTable.scss';
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    touch-action: none;
+    padding-top: 60px;
+    width: 100%;
+    position: relative;
+    background: url('../assets/image/10x/bg.png') repeat-y;
+    background-size: 100%;
+}
+
+* {
+    touch-action: none
+}
+
+label {
+    font-weight: 700;
+}
+
+html {
+    box-sizing: border-box;
+    touch-action: none;
+    min-height: 100%;
+}
+
+body,
+#idApp,
+#app,
+.app-wrapper,
+.main-container,
+.app-main,
+.app-container {
+    min-height: 100%;
+}
+
+.app-container {
+    overflow: auto
+}
+
+#app {}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+a,
+a:focus,
+a:hover {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+div:focus {
+    outline: none;
+}
+
+ul {
+    padding: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.clearfix {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+// main-container global css
+.app-container {
+    padding: 20px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right
+}
+
+.ml10 {
+    margin-left: 10px !important;
+}
+
+.ml20 {
+    margin-left: 20px !important;
+}
+
+.mr5 {
+    margin-right: 5px !important;
+}
+
+.mr10 {
+    margin-right: 10px !important;
+}
+
+.mr20 {
+    margin-right: 20px !important;
+}
+
+.mt5 {
+    margin-top: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.pt0 {
+    padding-top: 0 !important;
+}
+
+.pt10 {
+    padding-top: 10px !important;
+}
+
+.pt20 {
+    padding-top: 20px !important;
+}
+
+.p20 {
+    padding: 20px !important;
+}
+
+.pb0 {
+    padding-bottom: 0 !important;
+}
+
+.box-card {
+    overflow: visible;
+    // margin-bottom: 20px;
+}
+
+.blue {
+    color: #2196f3;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.el-table-filter {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.text_ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 33px;
+}
+
+.w500 {
+    width: 500px;
+}
+
+.pointFlag {
+    position: absolute;
+}
+
+.formBox,
+.comForm {
+    .el-form-item__label {
+        width: 120px !important;
+    }
+
+    .el-form-item__content {
+        margin-left: 120px !important;
+    }
+}
+
+.license {
+    .vue-upload-imgs {
+
+        .upload-div-add-img,
+        .upload-div-img {
+            width: 100%;
+        }
+    }
+}
+
+.transferBox {
+    .el-transfer-panel {
+        width: 300px;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.amap-icon img {
+    width: 50px;
+    height: auto;
+}
+
+.amap-icon {
+    width: 57px !important;
+    height: 108px !important;
+}
+
+
+
+.searchTop {
+    position: fixed;
+    top: 100px;
+    left: 455px;
+    z-index: 3;
+
+    .el-input__inner {
+        height: 31px;
+        line-height: 31px;
+        background: #151928;
+        font-size: 12px;
+        border: none;
+        color: #bbb;
+    }
+
+    .el-input__icon {
+        line-height: 31px;
+    }
+}
+
+.radioBox {
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #20bcfc;
+    color: #fff;
+    margin-top: 10px;
+    -webkit-box-shadow: #20bcfc 0px 0px 0.938vw inset;
+    box-shadow: #20bcfc 0px 0px 0.938vw inset;
+    background: rgba(20, 31, 59, .4);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: -7px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 7px solid #20bcfc;
+    }
+
+    .radio {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 30px;
+        background: #fff;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.logoUpload {
+    .upload-div-img {
+        min-width: 48%;
+        width: 48%
+    }
+}
+
+.amap-info {
+
+    .bottom-center,
+    .bottom-left {
+        padding-bottom: 0;
+    }
+}
+
+.maxImg {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.amap-ui-control-theme-light .amap-ui-control-layer {
+    background: none !important;
+}
+
+.amap-ui-control-theme-light .amap-ui-control-layer-list {
+    background: #fff !important;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.amap-ui-control-container.amap-ui-control-position-rt {
+    right: 455px;
+    top: 400px;
+
+    .amap-ui-control-layer-toggle {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        background: #151928;
+        color: #bbb;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .iconfont.icon-layer-switcher {
+            font-size: 16px;
+        }
+    }
+}
+
+.amap-controls {
+    display: none;
+}
+
+.pointFlag {
+    .infoBox {
+        border: 1px solid #20bcfc;
+        background: rgba(0, 0, 0, .5);
+        box-shadow: 0 0 10px inset #20bcfc;
+        border-radius: 50px;
+        overflow: hidden;
+        display: flex;
+
+        span {
+            padding: 5px 20px;
+
+            &:first-child {
+                border-right: 1px solid #20bcfc;
+            }
+        }
+    }
+}
+
+.starTime .el-form-item__content {
+    margin-left: 0 !important;
+}
+
+.titleBoxIndex {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    background: url('../assets/image/10x/titleBg.png') no-repeat right bottom;
+    background-size: cover;
+
+    .radio {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        background: url('../assets/image/10x/radio.png') no-repeat center;
+        background-size: cover;
+    }
+}
+
+.el-table__body {
+    .cell {
+        .el-button {
+            margin: 10px 0 0 10px
+        }
+    }
+}
